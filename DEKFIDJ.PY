@@ -26,6 +26,22 @@ async def on_ready():
             await client.change_presence(status=discord.Status.dnd, activity=discord.Activity(name=messages[(m)], type=discord.ActivityType.watching))
             await asyncio.sleep(3)
 
+@client.event
+async def on_member_join(member):
+    try:
+        syscha = member.guild.system_channel
+        await syscha.send(f"{member.mention} 님이 서버에 입장하셨습니다. ")
+    except:
+        pass
+
+@client.event
+async def on_member_remove(member):
+    try:
+        syscha = member.guild.system_channel
+        await syscha.send(member.name + "님이  ``" + member.guild.name + "`` 서버에서 나가셨습니다 ")
+    except:
+        pass
+
     if message.content == '!인증':
         syscha = member.guild.system_channel
         embed=discord.Embed(colour=0x85CFFF, timestamp=message.created_at)
