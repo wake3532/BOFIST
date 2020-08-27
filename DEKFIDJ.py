@@ -23,7 +23,7 @@ async def on_ready():
 async def on_member_join(member):
     try:
         syscha = member.guild.system_channel
-        await syscha.send(f"{member.mention} 님이 서버에 입장하셨습니다. ")
+        await syscha.send(f"{member.mention} 님 어서오세요 !인증이라고 말해주세요 ! ")
     except:
         pass
 
