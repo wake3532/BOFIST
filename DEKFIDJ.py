@@ -27,7 +27,9 @@ async def on_member_join(member):
     except:
         pass
 
-if message.content == '!인증':
+@client.event
+async def on_message(message):
+    if message.content == '!인증':
         syscha = message.channel
         embed=discord.Embed(colour=0x85CFFF, timestamp=message.created_at)
         embed.add_field(name="잠시만 기다려주세요", value="역할 지급중...", inline=True)
