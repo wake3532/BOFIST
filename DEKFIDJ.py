@@ -39,7 +39,7 @@ async def on_message(message):
         await message.delete()
         embed=discord.Embed(colour=0x85CFFF, timestamp=message.created_at)
         await syscha.send(f"{message.author.mention} 님 역할이 지급 되었습니다 !")
-        role = discord.utils.get(message.author.guild.roles, name='역할이름')
+        role = discord.utils.get(message.author.guild.roles, name='유저')
         await message.author.add_roles(role)
 
 access_token = os.environ["BOT_TOKEN"]
