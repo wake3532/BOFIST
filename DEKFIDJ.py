@@ -27,9 +27,6 @@ async def on_member_join(member):
         await syscha.send(f"{member.mention} 님 어서오세요 !인증이라고 말해주세요 ! ")
     except:
         pass
-
-@client.event
-async def on_message(message):
     
 if message.content == '!인증':
         syscha = message.channel
