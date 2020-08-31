@@ -42,7 +42,7 @@ async def on_member_join(member):
         embed = discord.Embed(title="인증코드", description = message.author.mention + ", 위에 있는 인증코드를 10초내에 입력해주세요.", timestamp=message.created_at,
         colour=discord.Colour.blurple()
     )
-        embed.set_footer(text="FOR#1234", icon_url="https://media.discordapp.net/attachments/725955414444736516/749785381716623436/DSAdSW.PNG"")
+        embed.set_footer(text="FOR#1234", icon_url="https://media.discordapp.net/attachments/725955414444736516/749785381716623436/DSAdSW.PNG")
         await message.channel.send(embed=embed)
 
         def check(msg):
