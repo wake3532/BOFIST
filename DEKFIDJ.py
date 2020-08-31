@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import captcha
 import os
 import asyncio
 import random
@@ -9,8 +10,6 @@ from urllib.request import Request
 from urllib import parse
 import bs4
 import time
-import captcha
-
 client = discord.Client()
 
 @client.event
