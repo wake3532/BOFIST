@@ -10,6 +10,7 @@ from urllib.request import Request
 from urllib import parse
 import bs4
 import time
+
 client = discord.Client()
 
 @client.event
