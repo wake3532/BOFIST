@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-import captcha
 import os
 import asyncio
 import random
